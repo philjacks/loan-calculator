@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+$primary-color: #343a40;
+$secondary-color: #04395e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../img/loan2-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 4rem;
+    text-align: center;
+    width: 50rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    #errorDiv {
+      background-color: #6a040f;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 2px solid white;
+      border-radius: 10px;
+      display: none;
+    }
+
+    h1 {
+      padding-bottom: 2rem;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      span {
+        color: $primary-color;
+        background-color: lightgrey;
+        padding: 1rem;
+        border-radius: 5px 0 0 5px;
+        border: 1px solid grey;
+      }
+
+      #perc {
+        padding: 1rem 0.8rem;
+      }
+
+      #calculate {
+        align-self: center;
+        padding: 0.8rem;
+        margin-top: 1rem;
+        background-color: $secondary-color;
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+        width: 70%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #2a6f97;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    #details {
+      .form-input {
+        input {
+          margin: 0.3rem 0.3rem 0.3rem 0;
+          padding: 1rem;
+          border: 1px solid grey;
+          border-radius: 0 5px 5px 0;
+          font-size: 1rem;
+          width: 90%;
+          align-self: center;
+
+          &::placeholder {
+            font-size: 1rem;
+          }
+          &[value] {
+            font-size: 1rem;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+
+    #loading {
+      margin-top: 1rem;
+      display: none;
+    }
+
+    #results {
+      margin-top: 2rem;
+      display: none;
+
+      p {
+        text-align: left;
+        background-color: rgba(109, 109, 109, 0.6);
+        color: white;
+        border-radius: 5px;
+        margin: 0.3rem 0.3rem 0.3rem 0;
+        padding: 1rem;
+        border: 1px solid grey;
+        font-size: 1rem;
+        width: 90%;
+        align-self: center;
+      }
+    }
+    #refresh {
+      align-self: flex-end;
+      margin: 1rem;
+      opacity: 0.6;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  @media screen and (max-width: 805px) {
+    #app {
+      width: 95%;
+      padding: 4rem 0.2rem;
+
+      #details {
+        .form-input {
+          width: 100%;
+
+          input {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

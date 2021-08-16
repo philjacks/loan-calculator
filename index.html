@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Loan Calculator | Phil Jacks</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="errorDiv"></div>
+      <h1 id="heading">LOAN CALCULATOR</h1>
+      <form class="wrap" id="details">
+        <div class="form-input">
+          <span>£</span>
+          <input
+            type="number"
+            id="amount"
+            step="any"
+            placeholder="Loan amount"
+          />
+        </div>
+        <div class="form-input">
+          <span id="perc">%</span>
+          <input
+            type="number"
+            id="interest"
+            step="any"
+            placeholder="Interest amount"
+          />
+        </div>
+        <div class="form-input">
+          <span>*</span>
+          <input
+            type="number"
+            id="years"
+            step="any"
+            placeholder="Number of months"
+          />
+        </div>
+        <input type="submit" value="Calculate" id="calculate" />
+      </form>
+
+      <img src="img/YlWC.gif" alt="" id="loading" />
+
+      <div class="wrap" id="results">
+        <p id="monthly"></p>
+        <p id="total-interest"></p>
+        <p id="total-paid"></p>
+      </div>
+      <img src="img/refresh.png" alt="" id="refresh" width="16px" />
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
