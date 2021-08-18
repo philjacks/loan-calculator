@@ -22,15 +22,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-image: url("../img/loan2-min.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
+  background-color: #eaeaea;
 }
 
 body #app {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,11 +41,17 @@ body #app {
   padding: 4rem;
   text-align: center;
   width: 50rem;
-  border: 2px solid white;
+  border: none;
   border-radius: 10px;
-  background-color: #343a40;
+  background: linear-gradient(164deg, black 9%, #358f80 49%);
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body #app #money {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 body #app #errorDiv {

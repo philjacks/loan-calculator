@@ -16,14 +16,10 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-image: url("../img/loan2-min.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
+  background-color: #eaeaea;
 
   #app {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,10 +27,20 @@ body {
     padding: 4rem;
     text-align: center;
     width: 50rem;
-    border: 2px solid white;
+    border: none;
     border-radius: 10px;
-    background-color: $primary-color;
+    background: linear-gradient(
+      164deg,
+      rgba(0, 0, 0, 1) 9%,
+      rgba(53, 143, 128, 1) 49%
+    );
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    #money {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
 
     #errorDiv {
       background-color: #6a040f;
