@@ -99,7 +99,7 @@ body #app .wrap #calculate {
       align-self: center;
   padding: 0.8rem;
   margin-top: 1rem;
-  background-color: #04395e;
+  background-color: black;
   border: 1px solid white;
   border-radius: 5px;
   color: white;
@@ -109,7 +109,9 @@ body #app .wrap #calculate {
 
 body #app .wrap #calculate:hover {
   cursor: pointer;
-  background-color: #2a6f97;
+  opacity: 0.8;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -173,8 +175,9 @@ body #app #results p {
 }
 
 body #app #refresh {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
   margin: 1rem;
   opacity: 0.6;
 }
